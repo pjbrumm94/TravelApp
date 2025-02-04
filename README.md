@@ -22,3 +22,4 @@ activity type, and returns a trip itinerary using LLM(OpenAI)
 # API: OpenAI GPT
 
 # Geolocation: Google Places API
+- Use Google places API to autocomplete
