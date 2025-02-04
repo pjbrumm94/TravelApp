@@ -1,7 +1,8 @@
-# Title:
-# Author:
-# Date:
-# Summary:
+# Title: Travel Itinerary App
+## Author: Peter J Brumm
+## Date: Feb. 4 2025
+## Summary: This app takes in user input(# of people), budget, location, & 
+## activity type, and returns a trip itinerary using LLM(OpenAI)
 ##############################################################################
 
 # Front-End: REACT + Tailwind
