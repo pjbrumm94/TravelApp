@@ -74,5 +74,4 @@ The Travel Itinerary Generator is a web-based application that automates the pro
 Contributions are welcome! Feel free to fork the repository, make improvements, and submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
 
