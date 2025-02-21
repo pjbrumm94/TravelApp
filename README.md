@@ -3,13 +3,12 @@
 ## Overview
 The Travel Itinerary Generator is a web-based application that automates the process of creating a personalized travel itinerary for a group based on multiple user inputs. It collects travel details via a Google Form, processes the data, and generates a shared itinerary using OpenAI's ChatGPT API while incorporating location preferences, travel distance limits, preferred travel types, and budget constraints.
 stateDiagram-v2
+
 '''mermaid
-[*] --> User_Input;
-User_Input --> LLM_Prompt;
-LLM_Prompt --> Travel_Itenerary;
-Travel_Itinerary --> LLM_Prompt:Travel_Amendments;
-Travel_Itinerary --> [*];
+graph LR;
+  A-->B
 '''
+
 
 ## Features
 - **Google Forms Integration**: Automatically fetch travel details submitted through a Google Form.
