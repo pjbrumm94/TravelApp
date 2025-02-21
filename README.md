@@ -30,8 +30,8 @@ The Travel Itinerary Generator is a web-based application that automates the pro
 ### Steps
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/pjbrumm94/travel-itinerary-generator.git
-   cd travel-itinerary-generator
+   git clone https://github.com/pjbrumm94/TravelApp.git
+   cd TravelApp 
    ```
 2. **Set up a virtual environment**
    ```sh
