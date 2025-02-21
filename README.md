@@ -5,11 +5,10 @@ The Travel Itinerary Generator is a web-based application that automates the pro
 stateDiagram-v2
 
 ```mermaid
-graph LR;
-  User_Input-->Google_Form;
-  Google_Form-->LLM;
-  LLM-->Travel_Itinerary;
-  Travel_Itinerary-->LLM;
+flowchart LR;
+  Input((Google Forms))-->LLM[(ChatGPT)];
+  LLM-->Iti{Travel_Itinerary};
+  Iti-->LLM;
 ```
 
 
