@@ -11,6 +11,9 @@ flowchart LR;
   userC[User Input]-->In
   In((Google Forms))-->LLM[(ChatGPT)];
   LLM-->Iti{Travel_Itinerary};
+  Iti-->userA;
+  Iti-->userB;
+  Iti-->userC;
   userA-->Iti;
   userB-->Iti;
   userC-->Iti;
