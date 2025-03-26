@@ -9,8 +9,7 @@ flowchart LR;
   usr[User Input]-->In
   In((Google Forms))-->LLM[(ChatGPT)];
   LLM-->Iti{Travel_Itinerary};
-  usr-->Iti;
-  Iti-->LLM;
+  Iti-->Usr;
   Iti-->Trav>Book Travel]
 ```
 
