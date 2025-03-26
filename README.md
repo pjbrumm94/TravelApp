@@ -6,17 +6,13 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR;
-  userA[User Input]-->In
-  userB[User Input]-->In
-  userC[User Input]-->In
+  usr[User Input]-->In
   In((Google Forms))-->LLM[(ChatGPT)];
   LLM-->Iti{Travel_Itinerary};
   Iti-->userA;
   Iti-->userB;
   Iti-->userC;
-  userA-->Iti;
-  userB-->Iti;
-  userC-->Iti;
+  usr-->Iti;
   Iti-->LLM;
   Iti-->Trav>Book Travel]
 ```
