@@ -6,15 +6,17 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR;
-  In@{ shape: cyl, label: "Initial Questionaire" } ==> usr;
-  usr@{ shape : processes, label: "User Input" } ==> tq;
+  In@{ shape: cyl, label: "Initial Questionaire" };
+  usr@{ shape : processes, label: "User Input" };
+  tq@{ shape: doc, label: "Text Query" };
+  LLM@{ shape: odd, label: "LLM" };
+  Iti@{ shape: diamond, label: "Travel Itinerary"};
 
-  tq@{ shape: doc, label: "Text Query" } ==> LLM;
-
-  LLM@{ shape: odd, label: "LLM" } ==> Iti;
-
-  Iti@{ shape: diamond, label: "Travel Itinerary"} -- Interactive Itinerary --> usr;
-
+  In ==> usr;
+  usr ==> tq;
+  tq ==> LLM;
+  LLM ==> Iti;
+  Iti -- Interactive Itinerary --> usr;
   Iti ==> Trav>Book Travel];
 ```
 
