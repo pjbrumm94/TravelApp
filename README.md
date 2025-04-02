@@ -1,10 +1,10 @@
 # Travel Itinerary Generator
 ├── app.py \
-├── templates/\
-│   └── index.html\
-├── requirements.txt\
-└── data/\
-    └── example.csv  # Optional starter CSV\
+├── templates/ \
+&emsp;└── index.html \
+├── requirements.txt \
+└── data/ \
+&emsp;└── example.csv  # Optional starter CSV
 
 ## Overview
 The Travel Itinerary Generator is a web-based application that automates the process of creating a personalized travel itinerary for a group based on multiple user inputs. It collects travel details via a Google Form, processes the data, and generates a shared itinerary using OpenAI's ChatGPT API while incorporating location preferences, travel distance limits, preferred travel types, and budget constraints.
