@@ -13,14 +13,13 @@ def index():
     itinerary = None
 
     if request.method == "POST":
-        csv_file = request.files.get("csv_file")
+        csv_file = request.files.get("data/example.csv")
 
         if csv_file:
             df = pd.read_csv(csv_file)
-            destinations = df.to_dict(orient="records")
             
             # Call OpenAI
-            prompt = f"Create a travel itinerary based on these destinations: {destinations}"
+            prompt = f"Create a travel itinerary based on this information: {df}"
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": prompt}]
