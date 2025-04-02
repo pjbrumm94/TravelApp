@@ -13,13 +13,18 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR;
-  userA[User Input]-->In
-  userB[User Input]-->In
-  userC[User Input]-->In
-  In((Google Forms))-->LLM[(ChatGPT)];
-  LLM-->Iti{Travel_Itinerary};
-  Iti-->LLM;
-  Iti-->Trav>Book Travel]
+  In@{ shape: cyl, label: "Initial Questionaire" };
+  usr@{ shape : processes, label: "User Input" };
+  tq@{ shape: doc, label: "Text Query" };
+  LLM@{ shape: odd, label: "LLM" };
+  Iti@{ shape: diamond, label: "Travel Itinerary"};
+
+  In ==> usr;
+  usr ==> tq;
+  tq ==> LLM;
+  LLM ==> Iti;
+  Iti -- Interactive Itinerary --> usr;
+  Iti ==> Trav>Book Travel];
 ```
 
 
