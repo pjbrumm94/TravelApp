@@ -15,12 +15,12 @@ def llm_prompt(data):
         )
     return(response.output_text)
 
-# Main Script
-sheet_name  = 'TravelCriteria'
-sheet_id    = '1q-xznX5gGTMO9eEcYhJl_uMiKdOuju9A3tujfZvdXlU'
+if __name__ = '__main__':
+    sheet_name  = 'TravelCriteria'
+    sheet_id    = '1q-xznX5gGTMO9eEcYhJl_uMiKdOuju9A3tujfZvdXlU'
 
-# Load Google Sheet into DataFrame
-data        = loadGS(sheet_name, sheet_id)
-# Send Google Sheet data to llm prompt
-itinerary   = llm_prompt(data)
-print(itinerary)
+    # Load Google Sheet into DataFrame
+    df          = loadGS(sheet_name, sheet_id)
+    # Send Google Sheet data to llm prompt
+    itinerary   = llm_prompt(df)
+    print(itinerary)
