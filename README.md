@@ -12,18 +12,24 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR;
-  In@{ shape: cyl, label: "Initial Questionaire" };
-  usr@{ shape : processes, label: "User Input" };
-  tq@{ shape: doc, label: "Text Query" };
-  LLM@{ shape: odd, label: "LLM" };
-  Iti@{ shape: diamond, label: "Travel Itinerary"};
+  userInputForm@{ shape: cyl, label: "Initial Questionaire" };
+  userPreferenceData@{ shape : processes, label: "User Input" };
+  userAggregateTextQuery@{ shape: doc, label: "Text Query" };
+  largeLanguageModel@{ shape: odd, label: "LLM" };
+  itineraryGenerated@{ shape: diamond, label: "Travel Itinerary"};
+  bookTravel@{ shape: cyl, label: "Book Travel" };
 
-  In ==> usr;
-  usr ==> tq;
-  tq ==> LLM;
-  LLM ==> Iti;
-  Iti -- Interactive Itinerary --> usr;
-  Iti ==> Trav>Book Travel];
+  userInputForm ==> userPreferenceData;
+
+  userPreferenceData ==> userAggregateTextQuery;
+
+  userAggregateTextQuery ==> largeLanguageModel;
+
+  largeLanguageModel ==> itineraryGenerated;
+
+  itineraryGenerated -- Interactive Itinerary --> userPreferenceData;
+
+  userPreferenceData ==> bookTravel;
 ```
 
 
